@@ -43,7 +43,16 @@ This backend is built with **Node.js** and **Firebase Cloud Functions**. Data is
 
    During initialization, select **Functions** and follow the prompts to create a Firebase project or link an existing one. The generated `firebase.json` and `functions` directory hold configuration and Cloud Function code.
 
-   Ensure that your environment has a service account or access token with permissions for Firestore and Cloud Messaging.
+  Ensure that your environment has a service account or access token with permissions for Firestore and Cloud Messaging.
+
+4. (Optional) Seed the database with mock data:
+
+   ```bash
+   cd functions
+   npm run seed
+   ```
+
+   The `seed` script populates Firestore with example users, vehicles, service records, bookings, and notification settings.
 
 ## API Overview
 

@@ -1,0 +1,15 @@
+{
+  "name": "myride-backend",
+  "description": "MyRide Backend Firebase Functions",
+  "main": "index.js",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "seed": "node seedMockData.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.4.1"
+  }
+}

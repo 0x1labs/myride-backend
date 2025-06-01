@@ -11,6 +11,7 @@ This repository contains the backend implementation for **MyRide**, an applicati
 - **Bookings**: Create and manage upcoming service bookings.
 - **Notifications**: Enable or disable notifications per user. Admins can send customized notifications based on vehicle type, service count, total distance, and more.
 - **Analytics**: Provide admins with analytics about vehicles and servicing trends.
+- **Authentication & Roles**: Access is secured with Firebase ID tokens and every user has a `user` or `admin` role.
 
 ## Technology Stack
 
@@ -61,6 +62,8 @@ The following endpoints outline a potential API design. Adjust paths or fields a
 
 - `POST /api/login` – Authenticate a user and return a token.
 - `POST /api/register` – Register a new user.
+- All other endpoints expect a Firebase ID token in the `Authorization` header.
+  Users have a `role` of either `user` or `admin`.
 
 ### Users
 
@@ -75,8 +78,7 @@ The following endpoints outline a potential API design. Adjust paths or fields a
 - `DELETE /api/vehicles/:id` – Remove a vehicle (admin only).
 
 ### Service Records
-
-- `POST /api/vehicles/:id/service-records` – Add a service record.
+- `POST /api/service-records` – Add a service record (admin only).
 - `GET /api/vehicles/:id/service-records` – List service records for a vehicle.
 
 ### Bookings

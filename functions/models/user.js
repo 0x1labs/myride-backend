@@ -7,6 +7,7 @@
  * @property {string} licenseUrl URL to driving license image
  * @property {string} insuranceUrl URL to insurance document
  * @property {boolean} notificationsEnabled Whether push notifications are enabled
+ * @property {string} role user or admin
  */
 
 class User {
@@ -17,6 +18,7 @@ class User {
     this.licenseUrl = data.licenseUrl;
     this.insuranceUrl = data.insuranceUrl;
     this.notificationsEnabled = data.notificationsEnabled ?? true;
+    this.role = data.role || 'user';
   }
 }
 

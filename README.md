@@ -45,6 +45,14 @@ This backend is built with **Node.js** and **Firebase Cloud Functions**. Data is
 
    Ensure that your environment has a service account or access token with permissions for Firestore and Cloud Messaging.
 
+4. Seed the emulator with mock data (optional):
+
+   ```bash
+   npm run --prefix functions seed
+   ```
+
+   This script populates Firestore in the emulator with a few sample users, vehicles, and service records so you can test the API quickly.
+
 ## API Overview
 
 The following endpoints outline a potential API design. Adjust paths or fields as needed for your implementation.

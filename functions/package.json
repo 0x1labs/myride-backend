@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "firebase emulators:start --only functions",
     "deploy": "firebase deploy --only functions",
-    "seed": "node scripts/seedMockData.js"
+    "seed": "node scripts/seedMockData.js",
+    "lint": "npx --no-install eslint ..",
+    "test": "node --test"
   },
   "dependencies": {
     "express": "^4.18.2",
